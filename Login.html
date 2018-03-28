@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html style="background-color:rgb(240,240,250)">
+<head>
+    <title>Facebook Login JavaScript Example</title>
+<style>
+        .navbar{
+            height: 50px;
+            background-color: rgb(40,200,150);
+            padding:0px;
+            color:white;
+            border-radius:0px;
+        } 
+	header, footer {
+    	padding: 1em;
+    	color: white;
+    	background-color: black;
+    	clear: left;
+    	text-align: center;
+	}
+        .putCenter{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-55%, -50%);
+            display: inline-block;
+        }
+        #caption{
+            font-size: 18px;
+        }
+    </style>
+
+
+    <meta charset="UTF-8">
+</head>
+<body style="background-color:rgb(40,200,150)">
+    <!--
+      Below we include the Login Button social plugin. This button uses
+      the JavaScript SDK to present a graphical Login button that triggers
+      the FB.login() function when clicked.
+    -->
+    <header style="background-color:rgb(40,200,150);">
+    <h1 style="text-align:center;background-color:rgb(40,200,150);color:White;"> Mr. WorldWides <i class="fa fa-map"></i></h1>
+    </header>    
+<center style="position:absolute; top:45%;left:0;right:0;">
+
+        <fb:login-button scope="public_profile,email, user_friends, user_photos" onlogin="checkLoginState();" data-auto-logout-link="true">
+        </fb:login-button>
+
+        <!--<center><button onclick="getUserData()">Click to Get Data</button></center>-->
+        <div id="status">
+        </div></br>
+        <button onclick="changeURL()" button class="btn btn-info" style="height:35px; width:70px;background-color: rgb(40,200,150); border: none;">Dale <i class="fa fa-map-signs"></i></button>
+    </center>
+    <embed src="pitbull_timber.mp3" autostart="true" loop="true" height="0px">
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5qu-uA1aIWCW1XpGheVEZhXU-30b9vWY" async defer></script>
+<script src="scripts/angular.min.js"></script>
+<script src="app.js"></script>
+
+<!-- Controllers -->
+<script src="databaseController.js"></script>
+<script src="mainController.js"></script>
+<!-- Directives -->
+<script src="scripts/postModal.js"></script>
+
+<script src="Facebook.js"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">

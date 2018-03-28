@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html style="background-color:rgb(240,240,250)">
+<head>
+<style>
+        .navbar{
+            height: 50px;
+            background-color: rgb(40,200,150);
+            padding:0px;
+            color:white;
+            border-radius:0px;
+        } 
+	header, footer {
+    	padding: 1em;
+    	background-color: black;
+    	clear: left;
+    	text-align: center;
+	}
+        .putCenter{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-55%, -50%);
+            display: inline-block;
+        }
+        #caption{
+            font-size: 18px;
+        }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align:left;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+table, th, td {
+    border: 1px solid black;
+}
+tr:nth-child(even){background-color:rgb(240,240,240) }
+tr:hover {background-color:Yellow;}
+th {
+    background-color: rgb(40,200,150);
+    color: white;
+}
+
+
+    </style>
+
+
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div style="background-color:rgb(40,200,150)">
+ 	   <header style="background-color:rgb(40,200,150);">
+		    <button onclick="gotoHome();" button class="btn btn-info" style="font-size:50px; background-color: rgb(40,200,150); border: none;">Mr.WorldWides <i class="fa fa-map"></i></button></br></br>
+	    </header> 
+    </div>
+    </br></br>
+    <button onclick="suggest_city(userObject.fb_id);" button class="btn btn-info" style="font-size:20px; background-color: rgb(40,200,150); border: none; id="collab_butt";">Collab Filter <i class="fa fa-database"></i></button></br></br>
+    <table style="width:100%; font-size:40px;"; id="city_table";>
+    <tr>
+	<th>City</th>
+	<th>Score</th>
+    </tr>
+
+    </table>
+</br></br></br></br></br></br>
+    <button onclick="friend_paradox(userObject.fb_id); user_paradox(userObject.fb_id);" button class="btn btn-info" style="font-size:20px; background-color: rgb(40,200,150); border: none;">Friend Paradox <i class="fa fa-group"></i></button></br></br>
+</br></br>
+<h1> You've been to.... </h1>
+<div id="odometer2" class="odometer" style="font-size:200px;">00</div>
+<h2> Different Cities </h2>
+
+<h1> On average your friends have been to.... </h1>
+<div id="odometer" class="odometer" style="font-size:200px;">00</div>
+<h2> Different Cities </h2>
+   <embed src="pitbull_give_me_everything.mp3" autostart="true" loop="true" height="0px">
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5qu-uA1aIWCW1XpGheVEZhXU-30b9vWY" async defer></script>
+<script src="scripts/angular.min.js"></script>
+<script src="app.js"></script>
+
+
+<!-- Controllers -->
+<script src="databaseController.js"></script>
+<script src="mainController.js"></script>
+<!-- Directives -->
+<script src="scripts/postModal.js"></script>
+
+<script src="Facebook.js"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-default.css" />
+<script src="http://github.hubspot.com/odometer/odometer.js"></script>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .navbar{
+            height: 50px;
+            background-color: rgb(40,200,150);
+            padding:0px;
+            color:white;
+            border-radius:0px;
+        } 
+        .putCenter{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-55%, -50%);
+            display: inline-block;
+        }
+        #caption{
+            font-size: 18px;
+        }
+	table {
+ 	   font-family: arial, sans-serif;
+ 	   border-collapse: collapse;
+ 	   width: 50%;
+	}
+
+	td, th {
+	    border: 1px solid #dddddd;
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="travelApp">
+    <div class="main" style="background-color: darkslategray; max-width:1800px; min-width:1000px" ng-controller="MainController">
+        <div class="col-md-12" style="background-color: rgb(240,240,250);">
+            <div class="row navbar">
+                <div class="col-md-4">
+					<button onclick="gotoHome();" button class="btn btn-info" style="font-size:25px; background-color: rgb(40, 200, 150); border: none;">Mr.WorldWides <i class ="fa fa-map"></i></button></br></br>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="col-md-2">
+                    <h4><i class="fa fa-user-circle"></i> {{user.first}} {{user.last}}</h4>
+                </div>
+            </div>
+            <div class="col-md-12" style="background-color:white; margin-top:25px;">
+                <h2>Database Changes <i class="fa fa-database"></i></h2>
+                <button onclick="getUsers()" type="button" class="btn btn-info" style="display:block; font-size:20px; background-color: rgb(40,200,150); border: none;">Get all users <i class="fa fa-user circle"></i></button>
+		</br>
+		<table id="userTable">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</table>		
+		</br>
+		<button onclick="getPhotos()" type="button" class="btn btn-info" style="font-size:20px; background-color: rgb(40,200,150); border: none;">Get given user's photos <i class="fa fa-camera"></i></button>
+		</br></br>
+                <table id="photoTable">
+                        <tr>
+                                <th>ID</th>
+                                <th>City</th>
+				<th>Country</th>
+                                <th>Date</th>
+				<th>Caption</th>
+				<th>Photo</th>
+				<th>Post</th>
+                        </tr>
+                </table>
+                </br>
+		<button onclick="deleteUser()" type="button" class="btn btn-info" style="font-size:20px; background-color: rgb(40,200,150); border: none;">Delete User <i class="fa fa-user-circle"></i></button>
+                </br></br>
+
+		Enter a valid User ID <input type="text" id="getUserID" style="display: inline-block"></input>
+
+
+          </div>
+        </div>
+    </div>
+</body>
+
+    
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5qu-uA1aIWCW1XpGheVEZhXU-30b9vWY" async defer></script>
+<script src="scripts/angular.min.js"></script>
+<script src="app.js"></script>
+
+<!-- Controllers -->
+<script src="mainController.js"></script>
+<script src="databaseController.js"></script>
+<!-- Directives -->
+<script src="scripts/postModal.js"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
